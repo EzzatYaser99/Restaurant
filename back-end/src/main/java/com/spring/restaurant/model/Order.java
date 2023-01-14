@@ -1,15 +1,15 @@
 package com.spring.restaurant.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.Set;
 
 @Data // generte getter setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "orderfood")
+@Table(name = "orders")
 public class Order extends CategoryOrder {
     @Column(name = "price")
     private int price;
@@ -17,4 +17,9 @@ public class Order extends CategoryOrder {
     private String img;
     @Column(name = "description")
     private String description;
+
+    @ManyToOne
+    @JoinColumn(name = "id_category")
+    private Category category;
+
 }
