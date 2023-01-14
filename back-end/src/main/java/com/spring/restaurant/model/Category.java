@@ -6,9 +6,9 @@ import lombok.*;
 
 @Data // generte getter setter
 @NoArgsConstructor
-@AllArgsConstructor
+
 @Entity
-@Table(name = "order")
+@Table(name = "category")
 public class Category extends CategoryOrder {
 
 
