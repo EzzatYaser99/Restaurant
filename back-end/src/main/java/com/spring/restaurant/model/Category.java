@@ -1,8 +1,6 @@
 package com.spring.restaurant.model;
 
 public class Category {
-
-
-    private  Long id;
+    private long id;
     private String categoryName;
 }
