@@ -1,5 +1,6 @@
 package com.spring.restaurant.model;
 
+import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,6 +8,8 @@ import lombok.NoArgsConstructor;
 @Data // generte getter setter
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class CategoryOrder extends BaseEntity{
-    private String categoryName;
+    @Column(name = "name")
+    private String name;
 }
