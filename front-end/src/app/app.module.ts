@@ -10,7 +10,19 @@ import {RouterModule, Routes} from "@angular/router";
 
 //http://localhost:4200
 const routes:Routes=[
-  {path:'',component:OrderItemsComponent},
+
+  //http://localhost:4200/category/2
+  {path:'category/:id',component:OrderItemsComponent},
+
+  //http://localhost:4200/category
+  {path:'category',component:OrderItemsComponent},
+  //http://localhost:4200/orders
+  {path:'orders',component:OrderItemsComponent},
+  //http://localhost:4200
+  {path:'',redirectTo:'/orders',pathMatch:'full'},
+
+  // if User enter any thing without all routes
+  {path:'**',redirectTo:'/orders',pathMatch:'full'},
 
 ]
 @NgModule({
