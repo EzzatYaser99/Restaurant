@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.*;
+import net.minidev.json.annotate.JsonIgnore;
 
 import java.util.Set;
 
@@ -14,7 +15,7 @@ import java.util.Set;
 @Table(name = "category")
 public class Category extends CategoryOrder {
 
-
+ @JsonIgnore
  @OneToMany(mappedBy = "category")
  private Set<Order>orders;
 }

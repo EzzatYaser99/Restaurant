@@ -2,6 +2,7 @@ package com.spring.restaurant.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import net.minidev.json.annotate.JsonIgnore;
 
 import java.util.Set;
 
@@ -21,6 +22,7 @@ public class Order extends CategoryOrder {
     @Lob
     private String description;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "id_category")
     private Category category;
