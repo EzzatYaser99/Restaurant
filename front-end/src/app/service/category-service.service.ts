@@ -16,11 +16,7 @@ export class CategoryServiceService {
       map(
         response=>response
       )
-
     )
-
-
   }
-
 
 }
