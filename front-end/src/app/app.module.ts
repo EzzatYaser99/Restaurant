@@ -10,7 +10,8 @@ import {RouterModule, Routes} from "@angular/router";
 
 //http://localhost:4200
 const routes:Routes=[
-  {path:'',component:OrderItemsComponent}
+  {path:'',component:OrderItemsComponent},
+
 ]
 @NgModule({
   declarations: [
