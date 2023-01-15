@@ -1113,10 +1113,10 @@ section {
 }
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 33px;
+  font-size: 23px;
   font-weight: bold;
   line-height: 56px;
-  font-family: cursive;
+  font-family: revert;
 }
 #hero p {
   margin-bottom: 13px;
@@ -1133,7 +1133,7 @@ section {
   margin-top: 4px;
 }
 .btn:not(:disabled):not(.disabled) {
-  margin: 4px 0px 2px 16px !important;
+  margin: 0px 0px 0px 0px !important;
 }
 .statusCard
 {
@@ -1159,14 +1159,21 @@ section {
   background-color: tomato;
 
 }
+
 .order-item{
 
-  height: 710px;
+  height:400px;
 
 }
+/*
 .mybu{
 
   bottom: 0;
   width: 90%;
   position: absolute;
+}
+*/
+img{
+
+  height: 220px;
 }

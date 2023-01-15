@@ -2,13 +2,9 @@
 -- -----------------------------------------------------
 -- order
 -- -----------------------------------------------------
-
-
-
 -- -----------------------------------------------------
 -- foods
 -- -----------------------------------------------------
-
 INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Dissolved Kebab","In a large bowl, mix the minced meat with the flour, all spices, garlic, egg and the dissolved MAGGI® Chicken Bouillon cubes until a well-combined mixture forms. Divide the mixture into small equal size balls","foods/dissolvedkebab",50,1,now());
 INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Rice with Meat","In a large skillet, cook beef and garlic over medium heat 6-8 minutes or until beef is no longer pink, breaking up beef into crumbles. Meanwhile, in a small bowl, mix brown sugar, soy sauce, oil and seasonings.","foods/ricewithmeat",60,1,now());
 INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Rice","Rice is the seed of the grass species Oryza sativa (Asian rice) or less commonly Oryza glaberrima (African rice). As a cereal grain, it is the most widely consumed staple food for a large part of the world's human population, especially in Asia and Africa","foods/rice",40,1,now());
@@ -53,7 +49,7 @@ INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES
 INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Cinnamon Tea","The easiest way to make this beverage is to simply add 1 teaspoon (2.6 grams) of ground cinnamon to 1 cup (235 ml) of boiled water and stir.","hot-drinks/cinnamontea",20,3,now());
 INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Tea","Tea is an aromatic beverage commonly prepared by pouring hot or boiling water over cured or fresh leaves of Camellia sinensis, an evergreen shrub native to China and East Asia. After water, it is the most widely consumed drink in the world","hot-drinks/tea",20,3,now());
 INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Peppermint Tea","To make your own peppermint tea: Bring 2 cups of water to a boil. Turn off the heat and add a handful of torn peppermint leaves to the water. Cover and steep for 5 minutes. Strain the tea and drink","hot-drinks/pepperminttea",10,3,now());
-INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Tea with Milk","Explore the best types of tea that are traditionally enhanced with either milk and sugar or both, including some popular milk tea recipes","hot-drinks/teawithmilk",20,3,now());
+INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Tea with Milk","Explore the best types of tea that are traditionally enhanced with either milk and sugar or both, including some popular milk tea recipes","hot-drinks/Teawithmilk",20,3,now());
 INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Green Tea","Green tea has been shown to improve blood flow and lower cholesterol. A 2013 review of many studies found green tea helped prevent a range","hot-drinks/greentea",25,3,now());
 INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Black Coffee","Nkosinathi Innocent Maphumulo (born 11 March 1976), better known by his stage name Black Coffee, is a South African DJ, record producer, singer","hot-drinks/blackcoffee",30,3,now());
 INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Coffee with Hazelnuts","The blend of flavors—coffee, hazelnut and a bit of chocolate—make this drink absolutely sensational. It is great for breakfast or brunch, but is also wonderful","hot-drinks/coffeewithhazelnuts",20,3,now());
@@ -62,10 +58,10 @@ INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES
 INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Plain Sahlab","Sahlab With Nuts. EGP 10.00. Plain Sahlab. EGP 8.00. Cappuccino. EGP 10.00. Mocha Latte. EGP 15.00. Hot Lemon. EGP 7.00. Latte. EGP 15.00. Nescafe Milk","hot-drinks/plainsahlab",20,3,now());
 INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Sahlab with Nuts","AbuAuf Sahlab - 250 gm New. 40.00 EGP. This traditional Middle Eastern drink is a dessert by itself, it is rich, creamy and decadent. It's a cup that fills you with","hot-drinks/sahlabwithnuts",30,3,now());
 INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Hot Chocolate","Combine the cocoa, sugar and pinch of salt in a saucepan. Blend in the boiling water. Bring this mixture to an easy boil while you stir. ","hot-drinks/hotchocolate",35,3,now());
-INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Milk Cinnamon","Place the milk and cinnamon bark in a small saucepan and heat almost to scalding; little bubbles should just begin forming around the perimeter","hot-drinks/milkcinnamon",30,3,now());
+INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Milk Cinnamon","Place the milk and cinnamon bark in a small saucepan and heat almost to scalding; little bubbles should just begin forming around the perimeter","hot-drinks/Milkcinnamon",30,3,now());
 INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Forget","Forget Juice. 9 likes. We know that life is limited edition so at Forget Juice, we creatively design products that express imagination","hot-drinks/forget",20,3,now());
 INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Mint","Take charge of your finances with Mint's online budget planner. Our free budget tracker helps you understand your spending for a brighter financial future","hot-drinks/mint",40,3,now());
-INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Nescafe Milk","The Nestlé First Milk Partnership encourages and delivers environmental stewardship on every farm. In collaboration with the Game & Wildlife Conservation Trust","hot-drinks/escafemilk",50,3,now());
+INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Nescafe Milk","The Nestlé First Milk Partnership encourages and delivers environmental stewardship on every farm. In collaboration with the Game & Wildlife Conservation Trust","hot-drinks/nescafemilk",50,3,now());
 INSERT INTO orders (name,description,image,price,id_category,date_create) VALUES ("Nescafe Black","NESCAFÉ Black Roast is bursting with rich coffee flavour for the strongest start to your morning without having to add an extra spoonful. Specially selected","hot-drinks/nescafeblack",20,3,now());
 
 -- -----------------------------------------------------
