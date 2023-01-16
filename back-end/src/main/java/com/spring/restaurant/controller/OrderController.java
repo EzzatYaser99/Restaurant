@@ -29,9 +29,10 @@ public class OrderController {
 
 
 
+    /*
     // http://localhost:8080/api/category?id={value}
-/*
-    @GetMapping("/api/category")
+
+    @GetMapping("category")
     public List<Order>getAllOrderByCategoryId(@RequestBody Long id) {
         return this.orderService.getOrderByIdCategories(id);
     }

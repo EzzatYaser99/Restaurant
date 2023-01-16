@@ -11,7 +11,7 @@ import {RouterModule, Routes} from "@angular/router";
 //http://localhost:4200
 const routes:Routes=[
 
-  //http://localhost:4200/category/2
+  //http://localhost:4200/category/id
   {path:'category/:id',component:OrderItemsComponent},
 
   //http://localhost:4200/category

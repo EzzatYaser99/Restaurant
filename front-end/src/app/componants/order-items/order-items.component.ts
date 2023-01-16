@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Order} from "../../model/order";
 import {OrderServiceService} from "../../service/order-service.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-order-items',
@@ -9,14 +10,22 @@ import {OrderServiceService} from "../../service/order-service.service";
 })
 export class OrderItemsComponent implements OnInit{
 orders:Order[]=[];
-
-  constructor( private order:OrderServiceService) {  }
-
+  constructor( private order:OrderServiceService ,private route:ActivatedRoute) {  }
   ngOnInit(): void {
-    this.getOrders()
-
+    this.finishOrders();
   }
 
+  finishOrders(){
+
+    let result=this.route.snapshot.paramMap.has('id');
+
+    if(result){
+      this.getOrdersByCategoryId();
+    }else {
+
+      this.getOrders()
+    }
+  }
   getOrders(){
     this.order.getOrders().subscribe(
       data =>{
@@ -25,5 +34,23 @@ orders:Order[]=[];
     } )
 
   }
+  getOrdersByCategoryId(){
+
+    let idCategory=this.route
+      .snapshot
+      .paramMap
+      .get('id');
+
+
+
+    this.order.getOrdersByCategoryId(idCategory).subscribe(
+      data =>{
+        this.orders=data;
+
+      } )
+
+  }
+
+
 
 }
