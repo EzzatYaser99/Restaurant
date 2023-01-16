@@ -9,16 +9,29 @@ import {map, Observable} from "rxjs";
 })
 export class OrderServiceService {
 
+  private baseUrl='http://localhost:8080/api/';
+  //private baseUrl='http://localhost:8080/api/allOrder';
+  //private url='http://localhost:8080/api/category?id'; ======== http://localhost:8080/api/category/{id}
 
-  private baseUrl='http://localhost:8080/api/allOrder';
   constructor(private http:HttpClient) { }
 
 getOrders():Observable<Order[]>{
-    return this.http.get<Order[]>(this.baseUrl).pipe(
+    return this.http.get<Order[]>(`${this.baseUrl}allOrder`).pipe(
 
       map(
         reponse=>reponse
       )
     )
 }
+  // @ts-ignore
+  getOrdersByCategoryId(id):Observable<Order[]>{
+    return this.http.get<Order[]>(`${this.baseUrl}category/${id}`).pipe(
+
+      map(
+        reponse=>reponse
+      )
+    )
+  }
+
+
 }
