@@ -16,10 +16,16 @@ public class OrderService {
 
         this.orderRepository = orderRepository;
     }
-    public List<Order>getAllOrders(){
+    public List<Order>getAllOrders() {
         return orderRepository.findAll();
+    }
+        public List<Order>getOrderByIdCategoriesOrders(Long id){
+      return orderRepository.findByCategoryid(id);
+
+
+        }
 
 
     }
-}
+
 
