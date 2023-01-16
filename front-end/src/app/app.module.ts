@@ -7,6 +7,7 @@ import { OrderItemsComponent } from './componants/order-items/order-items.compon
 import {HttpClientModule} from "@angular/common/http";
 import { CategoryItemsComponent } from './componants/category-items/category-items.component';
 import {RouterModule, Routes} from "@angular/router";
+import { DropdownMenuComponent } from './componants/dropdown-menu/dropdown-menu.component';
 
 //http://localhost:4200
 const routes:Routes=[
@@ -29,7 +30,8 @@ const routes:Routes=[
   declarations: [
     AppComponent,
     OrderItemsComponent,
-    CategoryItemsComponent
+    CategoryItemsComponent,
+    DropdownMenuComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

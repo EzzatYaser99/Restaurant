@@ -1,14 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-import {CategoryServiceService} from "../../service/category-service.service";
 import {Category} from "../../model/category";
+import {CategoryServiceService} from "../../service/category-service.service";
 
 @Component({
-  selector: 'app-category-items',
-  templateUrl: './category-items.component.html',
-  styleUrls: ['./category-items.component.css']
+  selector: 'app-dropdown-menu',
+  templateUrl: './dropdown-menu.component.html',
+  styleUrls: ['./dropdown-menu.component.css']
 })
-export class CategoryItemsComponent implements OnInit{
-
+export class DropdownMenuComponent implements OnInit{
   categories:Category[]= [];
   constructor(private categoryService:CategoryServiceService) { }
 
@@ -16,7 +15,7 @@ export class CategoryItemsComponent implements OnInit{
     this.gettAllCategories();
 
   }
-gettAllCategories(){
+  gettAllCategories(){
     this.categoryService.getAllCategory().subscribe(
       data=>{
         this.categories=data;
@@ -27,8 +26,5 @@ gettAllCategories(){
     )
 
 
-}
-
-
-
+  }
 }
