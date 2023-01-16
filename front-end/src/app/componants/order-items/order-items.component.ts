@@ -12,7 +12,12 @@ export class OrderItemsComponent implements OnInit{
 orders:Order[]=[];
   constructor( private order:OrderServiceService ,private route:ActivatedRoute) {  }
   ngOnInit(): void {
-    this.finishOrders();
+    this.route.paramMap.subscribe(
+
+      ()=>{
+        this.finishOrders();}
+    )
+
   }
 
   finishOrders(){
@@ -22,7 +27,6 @@ orders:Order[]=[];
     if(result){
       this.getOrdersByCategoryId();
     }else {
-
       this.getOrders()
     }
   }
@@ -30,9 +34,7 @@ orders:Order[]=[];
     this.order.getOrders().subscribe(
       data =>{
       this.orders=data;
-
     } )
-
   }
   getOrdersByCategoryId(){
 
