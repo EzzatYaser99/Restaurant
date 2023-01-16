@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin("http://localhost:4200")
+@RequestMapping("/api/")
 public class OrderController {
     private OrderService orderService ;
 
@@ -21,7 +22,7 @@ public class OrderController {
 
     // http://localhost:8080/api/allOrder
 
-    @GetMapping("/api/allOrder")
+    @GetMapping("allOrder")
     public List<Order>allOrders(){
         return orderService.getAllOrders();
     }
@@ -38,7 +39,7 @@ public class OrderController {
 */
 
     // http://localhost:8080/api/category/{id}
-    @GetMapping("/api/category/{id}")
+    @GetMapping("category/{id}")
     public List<Order>getAllOrderByCategoryId(@PathVariable Long id) {
         return this.orderService.getOrderByIdCategories(id);
     }
