@@ -25,13 +25,24 @@ getOrders():Observable<Order[]>{
 }
   // @ts-ignore
   getOrdersByCategoryId(id):Observable<Order[]>{
-    return this.http.get<Order[]>(`${this.baseUrl}category/${id}`).pipe(
+    return this.http.get<Order[]>(`${this.baseUrl}category?id=${id}`).pipe(
 
       map(
         reponse=>reponse
       )
     )
   }
+
+  // @ts-ignore
+  getOrdersByKey(word):Observable<Order[]>{
+    return this.http.get<Order[]>(`${this.baseUrl}orderkey?word=${word}`).pipe(
+
+      map(
+        reponse=>reponse
+      )
+    )
+  }
+
 
 
 }
