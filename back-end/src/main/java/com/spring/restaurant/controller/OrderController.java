@@ -29,22 +29,26 @@ public class OrderController {
 
 
 
-    /*
-    // http://localhost:8080/api/category?id={value}
 
+    // http://localhost:8080/api/category?id={value}
+/*
     @GetMapping("category")
-    public List<Order>getAllOrderByCategoryId(@RequestBody Long id) {
+    public List<Order>getAllOrderByCategoryId(@RequestParam Long id) {
         return this.orderService.getOrderByIdCategories(id);
     }
 
 */
-
     // http://localhost:8080/api/category/{id}
     @GetMapping("category/{id}")
     public List<Order>getAllOrderByCategoryId(@PathVariable Long id) {
         return this.orderService.getOrderByIdCategories(id);
     }
 
+    // http://localhost:8080/api/orderKey?word=key
+    @GetMapping("orderKey")
+    public List<Order>getOrderByKey( @RequestParam String word) {
+        return this.orderService.getOrderByKey(word);
+    }
 
 
 }

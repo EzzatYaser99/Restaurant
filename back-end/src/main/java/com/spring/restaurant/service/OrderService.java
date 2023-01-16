@@ -21,10 +21,10 @@ public class OrderService {
     }
         public List<Order>getOrderByIdCategories(Long id){
       return this.orderRepository.findByCategoryId(id);
-
-
         }
-
+public List<Order>getOrderByKey(String key) {
+    return this.orderRepository.findByNameContaining(key);
+}
 
     }
 
