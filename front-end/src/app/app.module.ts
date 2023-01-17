@@ -9,6 +9,7 @@ import { CategoryItemsComponent } from './componants/category-items/category-ite
 import {RouterModule, Routes} from "@angular/router";
 import { DropdownMenuComponent } from './componants/dropdown-menu/dropdown-menu.component';
 import { SerachOrderComponent } from './componants/serach-order/serach-order.component';
+import { OrderDetailsComponent } from './componants/order-details/order-details.component';
 
 //http://localhost:4200
 const routes:Routes=[
@@ -40,7 +41,8 @@ const routes:Routes=[
     OrderItemsComponent,
     CategoryItemsComponent,
     DropdownMenuComponent,
-    SerachOrderComponent
+    SerachOrderComponent,
+    OrderDetailsComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
