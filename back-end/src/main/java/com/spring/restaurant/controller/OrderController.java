@@ -15,10 +15,8 @@ public class OrderController {
 
     @Autowired
     public OrderController(OrderService orderService) {
-
         this.orderService = orderService;
     }
-
 
     // http://localhost:8080/api/allOrder
 
@@ -26,8 +24,6 @@ public class OrderController {
     public List<Order>allOrders(){
         return orderService.getAllOrders();
     }
-
-
 
 
     // http://localhost:8080/api/category?id={value}

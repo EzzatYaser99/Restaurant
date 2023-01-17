@@ -25,6 +25,10 @@ public class OrderService {
 public List<Order>getOrderByKey(String key) {
     return this.orderRepository.findByNameContaining(key);
 }
+public Order getOrder(Long id){
+
+        return this.orderRepository.findById(id).get();
+}
 
     }
 
