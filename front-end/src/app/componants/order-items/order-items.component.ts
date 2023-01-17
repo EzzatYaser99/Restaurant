@@ -22,11 +22,16 @@ orders:Order[]=[];
 
   finishOrders(){
 
-    let result=this.route.snapshot.paramMap.has('id');
+    let result1=this.route.snapshot.paramMap.has('id');
+    let result2=this.route.snapshot.paramMap.has('key');
 
-    if(result){
+    if(result1){
       this.getOrdersByCategoryId();
-    }else {
+    }else if(result2){
+      this.getAllOrdersContainingKey();
+
+    }else
+      {
       this.getOrders()
     }
   }
@@ -52,7 +57,21 @@ orders:Order[]=[];
       } )
 
   }
+  getAllOrdersContainingKey(){
+    let keyWord=this.route
+      .snapshot
+      .paramMap
+      .get('key');
+    alert(keyWord);
 
+    this.order.getOrdersByKey(keyWord).subscribe(
+      data=>{
+
+        this.orders=data;
+      }
+
+    )
+  }
 
 
 }
