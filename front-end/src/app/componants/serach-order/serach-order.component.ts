@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {OrderServiceService} from "../../service/order-service.service";
 import {Order} from "../../model/order";
+import {Router} from "@angular/router";
+import * as url from "url";
 
 @Component({
   selector: 'app-serach-order',
@@ -9,23 +11,17 @@ import {Order} from "../../model/order";
 })
 export class SerachOrderComponent implements OnInit{
 
-
-  orders:Order[]=[]
-  constructor( private orderServive:OrderServiceService) {
+  // orders:Order[]=[]
+  constructor( private orderServive:OrderServiceService , private router:Router) {
   }
-
 
   ngOnInit(): void {
   }
 
   doSearch(value: string) {
 
-    alert(value);
-  this.orderServive.getOrdersByKey(value).subscribe(
-    data=>{
-      this.orders=data;
+    this.router.navigateByUrl('/orders/'+value)
 
-    }
-  )
+
   }
 }
