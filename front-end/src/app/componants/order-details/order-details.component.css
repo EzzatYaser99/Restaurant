@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+.oneOrder {
+  margin-top: 20px;
+  background-color: beige;
+  padding: 29px;
+  width: 85%;
+
+}
+.mycard {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  height: auto;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  width: 90%;
+
+}
+.orbut
+{
+  width: inherit;
+}
