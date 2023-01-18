@@ -20,3 +20,14 @@
 {
   width: inherit;
 }
+i{
+  font-size: 40px;
+  position: absolute;
+  top: 74px;
+  background-color: #2eafec;
+  color: white;
+  border-radius: 50%;
+
+
+  cursor: pointer;
+}
