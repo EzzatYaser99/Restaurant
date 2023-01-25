@@ -53,5 +53,13 @@ public class OrderController {
     }
 
 
-}
+
+
+    // http://localhost:8080/api/orderSize
+    @GetMapping("orderSize")
+    public Long OrderSize() {
+        return orderService.getAllOrdersSize();
+
+    }
+    }
 

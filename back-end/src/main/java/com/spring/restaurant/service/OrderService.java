@@ -13,29 +13,36 @@ import java.util.List;
 @Service
 public class OrderService {
 
-    private OrderRepository orderRepository ;
+    private OrderRepository orderRepository;
 
     public OrderService(OrderRepository orderRepository) {
 
         this.orderRepository = orderRepository;
     }
-    public List<Order>getAllOrders(int page ,int size) {
+
+    public List<Order> getAllOrders(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
         return orderRepository.findAll(pageable).getContent();
     }
-        public List<Order>getOrderByIdCategories(Long id ,int page,int size){
-            Pageable pageable = PageRequest.of(page, size);
-      return this.orderRepository.findByCategoryId(id,pageable).getContent();
-        }
-public List<Order>getOrderByKey(String key,int page,int size) {
-    Pageable pageable = PageRequest.of(page, size);
-    return this.orderRepository.findByNameContaining(key,pageable).getContent();
-}
-public Order getOrder(Long id){
 
-        return this.orderRepository.findById(id).get();
-}
-
+    public List<Order> getOrderByIdCategories(Long id, int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return this.orderRepository.findByCategoryId(id, pageable).getContent();
     }
 
+    public List<Order> getOrderByKey(String key, int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return this.orderRepository.findByNameContaining(key, pageable).getContent();
+    }
+
+    public Order getOrder(Long id) {
+
+        return this.orderRepository.findById(id).get();
+    }
+
+    public Long getAllOrdersSize() {
+return  orderRepository.count();
+
+    }
+}
 
