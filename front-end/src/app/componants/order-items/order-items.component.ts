@@ -11,6 +11,8 @@ import {ActivatedRoute} from "@angular/router";
 export class OrderItemsComponent implements OnInit{
 orders:Order[]=[];
 page:number=1;
+pageLength:number=20;
+orderSize:number=78;
   constructor( private order:OrderServiceService ,private route:ActivatedRoute) {  }
   ngOnInit(): void {
     this.route.paramMap.subscribe(
@@ -37,7 +39,8 @@ page:number=1;
     }
   }
   getOrders(){
-    this.order.getOrders().subscribe(
+
+    this.order.getOrders(this.page-1,this.pageLength).subscribe(
       data =>{
       this.orders=data;
     } )
@@ -51,7 +54,7 @@ page:number=1;
 
 
 
-    this.order.getOrdersByCategoryId(idCategory).subscribe(
+    this.order.getOrdersByCategoryId(idCategory,this.page-1,this.pageLength).subscribe(
       data =>{
         this.orders=data;
 
@@ -65,7 +68,7 @@ page:number=1;
       .get('key');
 
 
-    this.order.getOrdersByKey(keyWord).subscribe(
+    this.order.getOrdersByKey(keyWord,this.page-1,this.pageLength).subscribe(
       data=>{
 
         this.orders=data;
@@ -74,7 +77,8 @@ page:number=1;
     )
   }
   doing() {
-    alert(this.page)
+
+    this.finishOrders();
 
   }
 }

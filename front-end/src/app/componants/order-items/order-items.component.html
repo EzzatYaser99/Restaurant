@@ -16,8 +16,8 @@
   <div class="col-12 p-1 m-auto " >
     <ngb-pagination
       [(page)]="page"
-      [pageSize]="50"
-      [collectionSize]="200"
+      [pageSize]="pageLength"
+      [collectionSize]="orderSize"
       (pageChange)="doing()"
 
     >
