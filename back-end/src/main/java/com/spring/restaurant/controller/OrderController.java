@@ -18,19 +18,19 @@ public class OrderController {
         this.orderService = orderService;
     }
 
-    // http://localhost:8080/api/allOrder
 
-    @GetMapping("allOrder")
-    public List<Order>allOrders(){
-        return orderService.getAllOrders();
+    // http://localhost:8080/api/allOrders?page={value}&size={value}
+    @GetMapping("allOrders")
+    public List<Order>allOrders(@RequestParam int page ,@RequestParam int size){
+        return orderService.getAllOrders(page,size);
     }
 
 
-    // http://localhost:8080/api/category?id={value}
+    // http://localhost:8080/api/category?id={value}&page={value}&size={value}
 
     @GetMapping("category")
-    public List<Order>getAllOrderByCategoryId(@RequestParam Long id) {
-        return this.orderService.getOrderByIdCategories(id);
+    public List<Order>getAllOrderByCategoryId(@RequestParam Long id,@RequestParam int page ,@RequestParam int size) {
+        return this.orderService.getOrderByIdCategories(id,page,size);
     }
 
 /*
@@ -40,10 +40,10 @@ public class OrderController {
         return this.orderService.getOrderByIdCategories(id);
     }
 */
-    // http://localhost:8080/api/orderkey?word=key
+    // http://localhost:8080/api/orderkey?word=key&page={value}&size={value}
     @GetMapping("orderkey")
-    public List<Order>getOrderByKey( @RequestParam String word) {
-        return this.orderService.getOrderByKey(word);
+    public List<Order>getOrderByKey( @RequestParam String word,@RequestParam int page ,@RequestParam int size) {
+        return this.orderService.getOrderByKey(word,page,size);
     }
 
     // http://localhost:8080/api/order?id={value}
