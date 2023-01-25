@@ -10,6 +10,7 @@ import {RouterModule, Routes} from "@angular/router";
 import { DropdownMenuComponent } from './componants/dropdown-menu/dropdown-menu.component';
 import { SerachOrderComponent } from './componants/serach-order/serach-order.component';
 import { OrderDetailsComponent } from './componants/order-details/order-details.component';
+import {NgbPagination, NgbPaginationModule} from "@ng-bootstrap/ng-bootstrap";
 
 //http://localhost:4200
 const routes:Routes=[
@@ -50,6 +51,8 @@ const routes:Routes=[
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgbPaginationModule,
+
     //NgModule
   ],
   providers: [

@@ -11,4 +11,19 @@
     <button class="btn btn-primary mybu">Add to Cart</button>
   </div>
 </div>
+  <div class="row">
+<div class="container m-auto">
+  <div class="col-12 p-1 m-auto " >
+    <ngb-pagination
+      [(page)]="page"
+      [pageSize]="50"
+      [collectionSize]="200"
+      (pageChange)="doing()"
+
+    >
+    </ngb-pagination>
+  </div>
+
+</div>
+  </div>
 </div>

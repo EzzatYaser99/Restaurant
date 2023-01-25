@@ -10,6 +10,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class OrderItemsComponent implements OnInit{
 orders:Order[]=[];
+page:number=1;
   constructor( private order:OrderServiceService ,private route:ActivatedRoute) {  }
   ngOnInit(): void {
     this.route.paramMap.subscribe(
@@ -72,6 +73,8 @@ orders:Order[]=[];
 
     )
   }
+  doing() {
+    alert(this.page)
 
-
+  }
 }
