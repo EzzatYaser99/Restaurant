@@ -30,7 +30,6 @@ export class OrderDetailsComponent implements OnInit{
       }
     )
   }
-
   allOrders() {
     // @ts-ignore
     this.router.navigateByUrl('/orders');
