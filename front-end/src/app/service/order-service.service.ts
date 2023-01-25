@@ -15,8 +15,9 @@ export class OrderServiceService {
 
   constructor(private http:HttpClient) { }
 
-getOrders():Observable<Order[]>{
-    return this.http.get<Order[]>(`${this.baseUrl}allOrder`).pipe(
+// @ts-ignore
+  getOrders(page,size):Observable<Order[]>{
+    return this.http.get<Order[]>(`${this.baseUrl}allOrders?page=${page}&size=${size}`).pipe(
 
       map(
         reponse=>reponse
@@ -24,8 +25,8 @@ getOrders():Observable<Order[]>{
     )
 }
   // @ts-ignore
-  getOrdersByCategoryId(id):Observable<Order[]>{
-    return this.http.get<Order[]>(`${this.baseUrl}category?id=${id}`).pipe(
+  getOrdersByCategoryId(id,page,size):Observable<Order[]>{
+    return this.http.get<Order[]>(`${this.baseUrl}category?id=${id}&page=${page}&size=${size}`).pipe(
 
       map(
         reponse=>reponse
@@ -34,8 +35,8 @@ getOrders():Observable<Order[]>{
   }
 
   // @ts-ignore
-  getOrdersByKey(word):Observable<Order[]>{
-    return this.http.get<Order[]>(`${this.baseUrl}orderkey?word=${word}`).pipe(
+  getOrdersByKey(word ,page,size):Observable<Order[]>{
+    return this.http.get<Order[]>(`${this.baseUrl}orderkey?word=${word}&page=${page}&size=${size}`).pipe(
 
       map(
         reponse=>reponse
