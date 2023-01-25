@@ -50,5 +50,11 @@ return  orderRepository.count();
         return orderRepository.getOrderLengthByCategoryId(id);
 
     }
+    public long getOrderSizeByKey( String key){
+        return orderRepository.getOrderSizeByKey(key);
+
+    }
+
+
 }
 

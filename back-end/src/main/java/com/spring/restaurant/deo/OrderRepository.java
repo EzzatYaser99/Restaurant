@@ -17,7 +17,12 @@ Page<Order> findByCategoryId(Long id, Pageable pageable);
 Page<Order>findByNameContaining(String name ,Pageable pageable);
 
 
-@Query("select count (id) from Order where category.id= ?1")
+
+@Query ("select count (id) from Order where category.id= ?1")
 public  long getOrderLengthByCategoryId(Long id);
+
+
+@Query("select count (id) from Order where name LIKE %?1%")
+public  long getOrderSizeByKey(String key);
 
 }
